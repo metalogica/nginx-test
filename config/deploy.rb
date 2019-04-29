@@ -24,7 +24,7 @@ set :format_options, command_output: true, log_file: "log/capistrano.log", color
 set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml"
+append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
@@ -57,10 +57,10 @@ set :ssh_options, verify_host_key: :secure
 # set :deploy_to, "/var/www/nginx-test"
 
 # Rbenv specific settings
-set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, File.read('.ruby-version').strip
-set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+# set :rbenv_type, :user # or :system, depends on your rbenv setup
+# set :rbenv_ruby, File.read('.ruby-version').strip
+# set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 
 # when using db, you should add config/database.yml here
-set :linked_files, fetch(:linked_files, []).concat(%w{.rbenv-vars})
-set :linked_dirs, fetch(:linked_dirs, []).concat(%w{log tmp/pids tmp/cache tmp/sockets vendor/bundle})
+# set :linked_files, fetch(:linked_files, []).concat(%w{.rbenv-vars})
+# set :linked_dirs, fetch(:linked_dirs, []).concat(%w{log tmp/pids tmp/cache tmp/sockets vendor/bundle})
