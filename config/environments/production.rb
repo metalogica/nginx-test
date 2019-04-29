@@ -3,7 +3,7 @@ Rails.application.configure do
 
   # This will tell Rails to ensure that a master key has been made available from either ENV['RAILS_MASTER_KEY'] or in config/master.key.
   config.require_master_key = true
-  Rails.application.credentials.secret_key_base = ENV['RAILS_SECRET_KEY_BASE']
+  Rails.application.credentials.secret_key_base = ENV['RAILS_MASTER_KEY']
 
   # Code is not reloaded between requests.
   config.cache_classes = true
