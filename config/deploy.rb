@@ -2,7 +2,8 @@
 lock "~> 3.11.0"
 
 # Pass master key to Server (/lib/capistrano/tasks/setup.rb)
-set :linked_files, fetch(:linked_files, []).push("config/master.key")
+# set :linked_files, fetch(:linked_files, []).push("config/master.key")
+append :linked_files, "config/secrets.yml.key"
 
 # set :user, "nginx-test"
 set :user, "nginx-test"
