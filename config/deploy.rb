@@ -1,6 +1,9 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
+# Pass master key to Server (/lib/capistrano/tasks/setup.rb)
+set :linked_files, fetch(:linked_files, []).push("config/master.key")
+
 # set :user, "nginx-test"
 set :user, "nginx-test"
 
