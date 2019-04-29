@@ -30,7 +30,8 @@ append :linked_files, "config/database.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
-set :default_env, { path: "/opt/ruby/bin:$PATH" }
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :default_env, { path: "/home/nginx-test/.rbenv/shims:$PATH" }
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
@@ -54,7 +55,7 @@ set :ssh_options, verify_host_key: :secure
 # set :repo_url, "git@github.com:catonmat/nginx-test.git"
 
 # # Where app files will be
-# set :deploy_to, "/var/www/nginx-test"
+# set :deploy_to, "/var/www/nginx-test "
 
 # Rbenv specific settings
 # set :rbenv_type, :user # or :system, depends on your rbenv setup
