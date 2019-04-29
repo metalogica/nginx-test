@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # This will tell Rails to ensure that a master key has been made available from either ENV['RAILS_MASTER_KEY'] or in config/master.key.
-  # config.require_master_key = true
+  config.require_master_key = false
   # Rails.application.credentials.secret_key_base = ENV['RAILS_MASTER_KEY']
 
   # Code is not reloaded between requests.
